@@ -14,7 +14,11 @@ defmodule Sequence.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [mod: { Sequence, 456 }]
+    [ 
+      mod: { Sequence, [] },
+      env: [initial_number: 456],
+      registered: [ :sequence ]  
+    ]
   end
 
   # Dependencies can be Hex packages:
